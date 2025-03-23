@@ -2,6 +2,7 @@
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
     --accent-color: #e74c3c;
+    --line-color: #06C755;
     --text-color: #333;
     --light-bg: #f9f9f9;
     --card-bg: #fff;
@@ -125,6 +126,10 @@ body {
     width: 30px;
     color: var(--secondary-color);
     font-size: 1.2rem;
+}
+
+.info-item .fa-line {
+    color: var(--line-color);
 }
 
 .info-item p {
