@@ -78,11 +78,11 @@ body {
 }
 
 .download-container {
-    margin-top: 20px;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
 }
 
 .download-btn {
@@ -98,6 +98,8 @@ body {
     font-size: 0.9rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    min-width: 200px;
+    text-align: center;
 }
 
 .download-btn:hover {
@@ -118,6 +120,16 @@ body {
 
 .download-btn.android-btn:hover {
     background-color: #388E3C;
+}
+
+.download-btn.card-btn {
+    background-color: #8E44AD;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 10px;
+}
+
+.download-btn.card-btn:hover {
+    background-color: #6C3483;
 }
 
 .download-btn i {
