@@ -6,7 +6,8 @@
 
 - `index.html`: 主要網頁
 - `styles.css`: 樣式表
-- `hongshenglen.vcf`: vCard格式的聯絡人檔案
+- `hongshenglen.vcf`: vCard格式的聯絡人檔案 (iOS版本)
+- `hongshenglen_android.vcf`: vCard格式的聯絡人檔案 (Android版本)
 - `darren_photo.jpg`: 個人照片
 - `README.md`: 本說明文件
 
@@ -27,8 +28,15 @@
 當有人用手機感應您的NFC卡片時，手機將會自動開啟網頁瀏覽器並顯示您的數位名片。訪客可以：
 
 1. 查看您的詳細資訊
-2. 點擊「下載聯絡資料」按鈕，將您的資訊匯入到他們的手機聯絡人中
+2. 選擇適合自己手機的版本下載聯絡資料：
+   - iOS用戶：點擊「iOS版聯絡資料」按鈕
+   - Android用戶：點擊「Android版聯絡資料」按鈕
 3. 點擊「加入LINE好友」按鈕，直接添加您為LINE好友
+
+## 兩種vCard版本的差異
+
+- **iOS版本**：提供更豐富的資訊，包含詳細的公司資訊、職稱、LINE連結和個人簡介。
+- **Android版本**：提供簡化的基本資訊，優化了兼容性，確保Android設備能夠順利匯入聯絡資料。
 
 ## 部署說明
 
@@ -45,4 +53,4 @@
 
 - 編輯 `index.html` 修改網站內容
 - 編輯 `styles.css` 修改網站樣式
-- 編輯 `hongshenglen.vcf` 修改vCard聯絡人資訊 
+- 編輯 `hongshenglen.vcf` 和 `hongshenglen_android.vcf` 修改vCard聯絡人資訊 
