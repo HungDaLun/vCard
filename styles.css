@@ -1,0 +1,241 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --light-bg: #f9f9f9;
+    --card-bg: #fff;
+    --border-radius: 10px;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    position: relative;
+}
+
+.photo-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid white;
+    box-shadow: var(--box-shadow);
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.download-container {
+    margin-top: 20px;
+}
+
+.download-btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.download-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.section {
+    padding: 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+.section h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.section h2 i {
+    margin-right: 10px;
+    color: var(--secondary-color);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.info-item i {
+    width: 30px;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.info-item p {
+    margin-left: 10px;
+}
+
+.info-item a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.info-item a:hover {
+    text-decoration: underline;
+}
+
+.topic-list {
+    list-style-type: none;
+    margin-left: 10px;
+}
+
+.topic-list li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.topic-list li:before {
+    content: "\f138";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    font-size: 1rem;
+}
+
+.exp-item, .edu-item, .publication-item {
+    margin-bottom: 25px;
+}
+
+.exp-item:last-child, .edu-item:last-child, .publication-item:last-child {
+    margin-bottom: 0;
+}
+
+.exp-item h3, .edu-item h3, .publication-item h3 {
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+}
+
+.exp-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.exp-desc {
+    color: #666;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .container {
+        padding: 0;
+    }
+    
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .photo-container {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .header {
+        padding: 20px 15px;
+    }
+    
+    .section {
+        padding: 20px 15px;
+    }
+    
+    .photo-container {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .header h1 {
+        font-size: 1.6rem;
+    }
+    
+    .title {
+        font-size: 1rem;
+    }
+    
+    .download-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+} 
