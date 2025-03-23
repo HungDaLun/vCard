@@ -86,13 +86,16 @@ body {
     width: 100%;
 }
 
-.download-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* 統一按鈕樣式 */
+.download-btn,
+.download-btn.android-btn,
+.download-btn.card-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     background-color: var(--secondary-color);
     color: white;
-    padding: 12px 15px;
+    padding: 12px 15px !important;
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
@@ -101,16 +104,31 @@ body {
     font-size: 0.9rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    width: 200px;
+    width: 200px !important;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin: 0;
-    box-sizing: border-box;
-    height: 46px;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    height: 46px !important;
 }
 
+.download-btn.android-btn {
+    background-color: #4CAF50;
+}
+
+.download-btn.card-btn {
+    background-color: #8E44AD;
+}
+
+.download-btn i {
+    margin-right: 8px;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+/* 按鈕懸停效果 */
 .download-btn:hover {
     background-color: #2980b9;
     transform: translateY(-2px);
@@ -122,29 +140,12 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
-.download-btn.android-btn {
-    background-color: #4CAF50;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
 .download-btn.android-btn:hover {
     background-color: #388E3C;
 }
 
-.download-btn.card-btn {
-    background-color: #8E44AD;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    margin: 0;
-}
-
 .download-btn.card-btn:hover {
     background-color: #6C3483;
-}
-
-.download-btn i {
-    margin-right: 8px;
-    font-size: 1rem;
-    flex-shrink: 0;
 }
 
 .section {
@@ -250,6 +251,20 @@ body {
     font-size: 0.9rem;
 }
 
+/* 按鈕內容樣式 */
+.btn-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 /* 響應式設計 */
 @media (max-width: 768px) {
     .container {
@@ -265,10 +280,12 @@ body {
         height: 120px;
     }
     
-    .download-btn {
-        width: 180px;
+    .download-btn,
+    .download-btn.android-btn,
+    .download-btn.card-btn {
+        width: 180px !important;
         font-size: 0.85rem;
-        height: 42px;
+        height: 42px !important;
     }
 }
 
@@ -298,12 +315,14 @@ body {
         font-size: 1rem;
     }
     
-    .download-btn {
-        width: 100%;
+    .download-btn,
+    .download-btn.android-btn,
+    .download-btn.card-btn {
+        width: 100% !important;
         max-width: 250px;
         font-size: 0.85rem;
-        padding: 10px 15px;
-        height: 40px;
+        padding: 10px 15px !important;
+        height: 40px !important;
     }
     
     .download-container {
