@@ -414,4 +414,49 @@ body {
         width: 90%;
         padding: 20px;
     }
+}
+
+/* 數位名片區域樣式 */
+.business-card-section {
+    text-align: center;
+}
+
+.business-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.business-card-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.save-instruction {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.save-instruction i {
+    color: var(--secondary-color);
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 480px) {
+    .business-card-img {
+        max-width: 90%;
+    }
+    
+    .save-instruction {
+        font-size: 0.85rem;
+    }
 } 

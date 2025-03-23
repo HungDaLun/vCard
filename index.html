@@ -29,12 +29,6 @@
                             <span class="btn-text">匯入Android聯絡人</span>
                         </span>
                     </a>
-                    <a href="aim_darren.png" class="download-btn card-btn" download id="download-card-btn">
-                        <span class="btn-content">
-                            <i class="fas fa-id-card"></i>
-                            <span class="btn-text">下載名片</span>
-                        </span>
-                    </a>
                 </div>
             </div>
             
@@ -111,56 +105,23 @@
                     <p>客座專欄於Inside、關鍵評論網、數位時代、科技橘報、經理人等媒體。</p>
                 </div>
             </div>
+            
+            <div class="section business-card-section">
+                <h2><i class="fas fa-id-card"></i> 數位名片</h2>
+                <div class="business-card-container">
+                    <img src="aim_darren.png" alt="洪聖倫的數位名片" class="business-card-img">
+                    <p class="save-instruction"><i class="fas fa-info-circle"></i> 長按上方圖片即可儲存至您的相簿</p>
+                </div>
+            </div>
 
             <div class="footer">
-                <p>© 2024 洪聖倫 | 透過NFC名片連結</p>
+                <p>© 2025 洪聖倫 | 透過NFC名片連結</p>
             </div>
         </div>
     </div>
     
-    <!-- 提示對話框 -->
-    <div id="save-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h3>名片已下載</h3>
-            <p class="ios-tip">iPhone用戶：名片已下載，請到「檔案」App中找到下載的圖片，點擊並選擇「儲存至相簿」。</p>
-            <p class="android-tip">Android用戶：名片已下載，請到「下載」資料夾中找到圖片，長按並選擇「儲存至相簿」或「加入圖庫」。</p>
-            <button class="modal-btn">好的，我知道了</button>
-        </div>
-    </div>
-    
     <script>
-        // 下載名片後顯示提示
-        document.getElementById('download-card-btn').addEventListener('click', function() {
-            setTimeout(function() {
-                document.getElementById('save-modal').style.display = 'flex';
-            }, 1000);
-        });
-        
-        // 關閉提示對話框
-        document.querySelector('.close-btn').addEventListener('click', function() {
-            document.getElementById('save-modal').style.display = 'none';
-        });
-        
-        document.querySelector('.modal-btn').addEventListener('click', function() {
-            document.getElementById('save-modal').style.display = 'none';
-        });
-        
-        // 點擊對話框外部時關閉
-        window.addEventListener('click', function(event) {
-            var modal = document.getElementById('save-modal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
-        });
-        
-        // 根據平台顯示不同提示
-        var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-        if (isIOS) {
-            document.querySelector('.android-tip').style.display = 'none';
-        } else {
-            document.querySelector('.ios-tip').style.display = 'none';
-        }
+        // 移除舊代碼，不再需要模態對話框相關的JavaScript
     </script>
 </body>
 </html> 
