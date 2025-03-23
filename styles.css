@@ -83,13 +83,16 @@ body {
     justify-content: center;
     gap: 10px;
     margin: 15px 0;
+    width: 100%;
 }
 
 .download-btn {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--secondary-color);
     color: white;
-    padding: 12px 20px;
+    padding: 12px 15px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
@@ -98,8 +101,14 @@ body {
     font-size: 0.9rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    min-width: 200px;
+    width: 200px;
     text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    box-sizing: border-box;
+    height: 46px;
 }
 
 .download-btn:hover {
@@ -125,7 +134,7 @@ body {
 .download-btn.card-btn {
     background-color: #8E44AD;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    margin-top: 10px;
+    margin: 0;
 }
 
 .download-btn.card-btn:hover {
@@ -133,7 +142,9 @@ body {
 }
 
 .download-btn i {
-    margin-right: 5px;
+    margin-right: 8px;
+    font-size: 1rem;
+    flex-shrink: 0;
 }
 
 .section {
@@ -253,6 +264,12 @@ body {
         width: 120px;
         height: 120px;
     }
+    
+    .download-btn {
+        width: 180px;
+        font-size: 0.85rem;
+        height: 42px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -282,8 +299,11 @@ body {
     }
     
     .download-btn {
-        padding: 10px 15px;
+        width: 100%;
+        max-width: 250px;
         font-size: 0.85rem;
+        padding: 10px 15px;
+        height: 40px;
     }
     
     .download-container {
